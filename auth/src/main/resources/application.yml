@@ -1,0 +1,8 @@
+# application.yml in both auth-service & api-gateway-service
+jwt:
+  secret: "%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F"
+  expiration: 86400000
+
+logging:
+  level:
+    org.springframework.security: trace

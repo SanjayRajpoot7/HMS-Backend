@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ROOM-SERVICE
+          uri: http://localhost:8083  # Room service port
+          predicates:
+            - Path=/api/rooms/**
+          filters:
+            - RewritePath=/api/rooms/(?<segment>.*), /$\{segment}  # Fixed path
+
+        - id: BOOKING-SERVICE
+          uri: http://localhost:8082  # Booking service port
+          predicates:
+            - Path=/api/bookings/**
+          filters:
+            - RewritePath=/api/bookings/(?<segment>.*), /$\{segment}  # Fixed path
+
+
+
+# application.yml in both auth-service & api-gateway-service
+jwt:
+  secret: "%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F)A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C&F"
+  expiration: 86400000
+
