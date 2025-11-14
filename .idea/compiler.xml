@@ -3,32 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for Staff Service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
-        </processorPath>
-        <module name="apigatewayservice" />
-        <module name="roomService" />
-        <module name="billservice" />
-        <module name="auth" />
-        <module name="bookingService" />
-        <module name="staffService" />
-        <module name="Service-Registry" />
-      </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Service-Registry" options="-parameters" />
-      <module name="apigatewayservice" options="-parameters" />
-      <module name="auth" options="-parameters" />
-      <module name="billservice" options="-parameters" />
-      <module name="bookingService" options="-parameters" />
-      <module name="roomService" options="-parameters" />
-      <module name="staffService" options="-parameters" />
-    </option>
   </component>
 </project>
